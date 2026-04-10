@@ -39,29 +39,29 @@ export default function NavBar() {
               </MenuItem>
             </Box>
             <Box sx={{ display: "flex" }}>
-              <MenuItemLink to='/activities'>
-                Activities
-              </MenuItemLink>
-              <MenuItemLink to='/createActivity'>
-                Create Activity
-              </MenuItemLink>
+              <MenuItemLink to="/activities">Activities</MenuItemLink>
+              <MenuItemLink to="/createActivity">Create Activity</MenuItemLink>
+              <MenuItemLink to="/errors">Errors</MenuItemLink>
             </Box>
-            <MenuItem>
-              User Menu
-            </MenuItem>
+            <MenuItem>User Menu</MenuItem>
           </Toolbar>
         </Container>
 
         <Observer>
-          {() => uiStore.isLoading ? (
-            <LinearProgress color="secondary" sx={{
-              position:'absolute',
-              bottom:0,
-              left:0,
-              right:0,
-              height:4
-            }}/>
-          ):null}
+          {() =>
+            uiStore.isLoading ? (
+              <LinearProgress
+                color="secondary"
+                sx={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  height: 4,
+                }}
+              />
+            ) : null
+          }
         </Observer>
       </AppBar>
     </Box>
