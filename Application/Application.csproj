@@ -21,6 +21,8 @@
     <Folder Include="Activities/Commands/" />
     <Folder Include="Activities/DTOs/" />
     <Folder Include="Activities/Queries/" />
+    <Folder Include="Profiles/" />
+    <Folder Include="Profiles/DTOs/" />
   </ItemGroup>
 
 </Project>
