@@ -16,4 +16,5 @@ public class Activity
     public double Latitude { get; set; }
     //navigation props
     public ICollection<ActivityAttendee> Attendees {get;set;}=[];
+    public ICollection<Comment> Comments {get;set;} = [];
 }

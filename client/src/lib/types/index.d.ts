@@ -66,3 +66,13 @@ type Photo = {
   id:string,
   url:string
 }
+
+type ChatComment = {
+  id:string
+  body:string
+  createDate:Date
+  userId:string
+  activityId:string
+  imageUrl?:string
+  displayName:string
+}
