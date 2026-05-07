@@ -53,6 +53,9 @@ type Profile = {
   displayName: string
   bio?: string
   imageUrl?: string
+  followerCount?:number
+  followingCount?:number
+  following?:boolean
 };
 
 type User = {

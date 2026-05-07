@@ -10,9 +10,9 @@ public class DbInitializer
     {
         var users = new List<User>
         {
-            new() {DisplayName="Bob", UserName="bob@test.com", Email="bob@test.com"},  
-            new() {DisplayName="Tom", UserName="tom@test.com", Email="tom@test.com"}, 
-            new() {DisplayName="Ann", UserName="ann@test.com", Email="ann@test.com"}
+            new() {Id="bob-id", DisplayName="Bob", UserName="bob@test.com", Email="bob@test.com"},  
+            new() {Id="tom-id", DisplayName="Tom", UserName="tom@test.com", Email="tom@test.com"}, 
+            new() {Id="ann-id", DisplayName="Ann", UserName="ann@test.com", Email="ann@test.com"}
         };
         // if (userManager.Users.Any())
         // {
@@ -23,7 +23,6 @@ public class DbInitializer
         // }
         if (!userManager.Users.Any())
         {
-            
             foreach(var user in users)
             {
                 await userManager.CreateAsync(user, "Pa$$w0rd");

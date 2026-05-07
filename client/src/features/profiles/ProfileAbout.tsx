@@ -9,7 +9,7 @@ export default function ProfileAbout() {
   return (
     <Box>
       <Box display="flex" justifyContent="space-between">
-        <Typography variant="h5">About {profile?.displayName}</Typography>Ï
+        <Typography variant="h5">About {profile?.displayName}</Typography>
         <Button onClick={() => {}}>Edit profile</Button>
       </Box>
       <Divider sx={{ my: 2 }} />

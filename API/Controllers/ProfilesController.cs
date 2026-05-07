@@ -1,4 +1,5 @@
 using System;
+using Application.Activities.Commands;
 using Application.Profiles.Commands;
 using Application.Profiles.DTOs;
 using Application.Profiles.Queries;
@@ -40,4 +41,16 @@ public class ProfilesController:BaseApiController
         return HandleResult(await Mediator.Send(new GetProfile.Query{UserId= userId}));
     }
 
+    [HttpPost("{userId}/follow")]
+    public async Task<ActionResult> FollowToggle(string userId)
+    {
+        return HandleResult(await Mediator.Send(new FollowToggle.Command {TargetId=userId}));
+    } 
+
+    [HttpGet("{userId}/follow-list")]
+    //get predicate from query string
+    public async Task<ActionResult<List<UserProfile>>> GetFollowings(string userId, string predicate)
+    {
+        return HandleResult(await Mediator.Send(new GetFollowings.Query {Predicate=predicate, UserId=userId}));
+    }
 }
