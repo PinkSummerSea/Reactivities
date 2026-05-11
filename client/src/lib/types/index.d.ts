@@ -1,3 +1,8 @@
+type PagedList<T, TCursor> = {
+  items: T[]
+  nextCursor: TCursor
+}
+
 type Activity = {
   id: string
   title: string
@@ -78,4 +83,11 @@ type ChatComment = {
   activityId:string
   imageUrl?:string
   displayName:string
+}
+
+type UserActivity = {
+  id:string,
+  date: Date,
+  category: string,
+  title: string
 }
