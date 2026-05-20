@@ -40,7 +40,7 @@ public class AppDbContext(DbContextOptions options):IdentityDbContext<User>(opti
             .HasOne(x => x.Target)
             .WithMany(x => x.Followers)
             .HasForeignKey(x => x.TargetId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.NoAction);
         
         var dateTimeConverter = new ValueConverter<DateTime, DateTime>(
             v => v.ToUniversalTime(),
