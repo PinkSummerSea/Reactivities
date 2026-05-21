@@ -37,7 +37,7 @@ export default function ActivityDetailsSidebar({activity}:Props) {
           <Grid key={a.id} container alignItems="center">
             <Grid size={8}>
               <List sx={{ display: "flex", flexDirection: "column" }}>
-                <ListItem component={Link} to={`/profile/${a.id}`}>
+                <ListItem component={Link} to={`/profiles/${a.id}`}>
                   <ListItemAvatar>
                     <Avatar
                       variant="rounded"
