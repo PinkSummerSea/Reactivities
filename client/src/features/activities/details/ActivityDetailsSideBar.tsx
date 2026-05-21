@@ -9,6 +9,7 @@ import {
   ListItemText,
   Chip,
 } from "@mui/material";
+import { Link } from "react-router";
 
 type Props = {
   activity: Activity
@@ -36,7 +37,7 @@ export default function ActivityDetailsSidebar({activity}:Props) {
           <Grid key={a.id} container alignItems="center">
             <Grid size={8}>
               <List sx={{ display: "flex", flexDirection: "column" }}>
-                <ListItem>
+                <ListItem component={Link} to={`/profile/${a.id}`}>
                   <ListItemAvatar>
                     <Avatar
                       variant="rounded"
